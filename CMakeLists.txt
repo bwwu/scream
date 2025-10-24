@@ -4,9 +4,9 @@ PROJECT( scream )
 
 message("Source Dir:" ${scream_SOURCE_DIR})
 
-SET(EXECUTABLE_OUTPUT_PATH ${scream_SOURCE_DIR}/bin)
-SET(LIBRARY_OUTPUT_PATH ${scream_SOURCE_DIR}/lib)
-SET(RUNTIME_OUTPUT_DIRECTORY ${scream_SOURCE_DIR}/bin)
+#SET(EXECUTABLE_OUTPUT_PATH ${scream_SOURCE_DIR}/bin)
+#SET(LIBRARY_OUTPUT_PATH ${scream_SOURCE_DIR}/lib)
+#SET(RUNTIME_OUTPUT_DIRECTORY ${scream_SOURCE_DIR}/bin)
 
 SET(scream_BIN ${scream_SOURCE_DIR}/bin)
 
@@ -82,3 +82,7 @@ ADD_SUBDIRECTORY(code/wrapper_lib)
 
 
 ADD_SUBDIRECTORY( code)
+
+INSTALL(TARGETS scream DESTINATION .)
+
+
