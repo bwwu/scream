@@ -10,6 +10,9 @@ SET(RUNTIME_OUTPUT_DIRECTORY ${scream_SOURCE_DIR}/bin)
 
 SET(scream_BIN ${scream_SOURCE_DIR}/bin)
 
+option(BUILD_SHARED_LIBS "Build libs as shared DLL" ON)
+message(STATUS "BUILD_SHARED_LIBS=${BUILD_SHARED_LIBS}")
+
 message("scream_SOURCE_DIR directories:" ${scream_SOURCE_DIR})
 
 IF(UNIX)
