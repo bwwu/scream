@@ -1,3 +1,5 @@
+extern crate cmake;
+use cmake::Config;
 
 fn main() {
     gst_plugin_version_helper::info();
