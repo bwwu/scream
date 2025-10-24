@@ -3,8 +3,6 @@
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 cmake_minimum_required(VERSION 2.6)
 
-set(BUILD_SHARED_LIBS  on)
-
 SET(HEADERS
 ../ScreamTx.h
 ../RtpQueue.h
@@ -26,7 +24,6 @@ if(BUILD_SHARED_LIBS)
   add_library(scream SHARED ${SRCS})
 
 else()
-
   set(CMAKE_CXX_FLAGS                " -DV2  -g  -I .. ${CMAKE_CXX_FLAGS_INIT} -fPIC")
   add_library(scream STATIC ${SRCS})
 endif()
