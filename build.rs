@@ -16,5 +16,8 @@ fn main() {
         panic!("Library output directory does not exist: {}", lib_dir.display());
     }
     println!("cargo:rustc-link-search=native={}", lib_dir.display());
-    println!("cargo:rustc-link-lib=dylib=scream");
+    println!("cargo:rustc-link-lib=static=scream");
+    println!("cargo:rustc-link-lib=c++");
+    println!("cargo:warning=libscream crate dir {}", crate_dir.display());
+    println!("cargo:root={}", crate_dir.display());
 }

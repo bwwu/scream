@@ -1,0 +1,16 @@
+[package]
+name = "libscream"
+version = "0.6.0"
+authors = ["Jacob Teplitsky"]
+repository = "https://github.com/EricssonResearch/scream.git"
+license = "BSD 2-clause"
+edition = "2021"
+description = "Libscream shared or static lib"
+links = "libscream"
+
+[lib]
+name = "libscream"
+crate-type = ["staticlib"]
+
+[build-dependencies]
+cmake = "0.1.31"
