@@ -1,16 +1,5 @@
-[package]
-name = "libscream"
-version = "0.6.0"
-authors = ["Jacob Teplitsky"]
-repository = "https://github.com/EricssonResearch/scream.git"
-license = "BSD 2-clause"
-edition = "2021"
-description = "Rust Gstscream Scream Plugin"
-
-
-[lib]
-name = "libscream"
-crate-type = ["rlib"]
-
-[build-dependencies]
-cmake = "0.1.31"
+[workspace]
+members = [
+    "libscream",
+    "gstscream",
+]
