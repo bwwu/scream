@@ -23,5 +23,4 @@ fn main() {
     println!("cargo:rustc-link-search=native={}", lib_dir.display());
     println!("cargo:rustc-link-lib=static=scream");
     println!("cargo:rustc-link-lib=stdc++");
-    println!("cargo:rustc-link-lib=c++");
 }
