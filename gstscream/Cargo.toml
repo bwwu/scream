@@ -26,7 +26,7 @@ clap = { version = "4.5.11", features=["env","derive"] }
 
 [lib]
 name = "gstscream"
-crate-type = ["rlib", "staticlib", "dylib"]
+crate-type = ["rlib", "staticlib", "cdylib"]
 path = "src/lib.rs"
 
 
