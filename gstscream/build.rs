@@ -19,6 +19,11 @@ fn main() {
     println!("cargo:rustc-link-search=native={}", lib_dir.display());
     println!("cargo:rustc-link-lib=static=scream");
 
+    let target = std::env::var("TARGET").unwrap();
+    if (target.contains("apple-darwin")) {
+        println!("cargo:rustc-link-lib=c++");
+    }
+
     let target: String = std::env::var("TARGET").unwrap();
     if !target.contains("apple") {
         println!("cargo:rustc-link-lib=stdc++");

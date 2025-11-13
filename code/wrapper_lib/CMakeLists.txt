@@ -2,6 +2,9 @@
 
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 cmake_minimum_required(VERSION 2.6)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GST REQUIRED gstreamer-1.0 gstreamer-base-1.0)
+
 
 SET(HEADERS
 ../ScreamTx.h
@@ -27,6 +30,17 @@ else()
   set(CMAKE_CXX_FLAGS                " -DV2  -g  -I .. ${CMAKE_CXX_FLAGS_INIT} -fPIC")
   add_library(scream STATIC ${SRCS})
 endif()
+
+target_include_directories(scream PRIVATE
+  ${GST_INCLUDE_DIRS}
+)
+
+target_link_directories(scream PRIVATE
+  ${GST_LIBRARY_DIRS}
+)
+target_link_libraries(scream PRIVATE
+  ${GST_LIBRARIES}
+)
 
 
 INCLUDE_DIRECTORIES(
